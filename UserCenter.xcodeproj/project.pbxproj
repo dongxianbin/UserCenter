@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF43FC141F14D38A00524E6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF43FC131F14D38A00524E6C /* main.m */; };
+		EF43FC171F14D38A00524E6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF43FC161F14D38A00524E6C /* AppDelegate.m */; };
+		EF43FC1A1F14D38A00524E6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF43FC191F14D38A00524E6C /* ViewController.m */; };
+		EF43FC1F1F14D38B00524E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF43FC1E1F14D38B00524E6C /* Assets.xcassets */; };
+		EF43FC221F14D38B00524E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF43FC201F14D38B00524E6C /* LaunchScreen.storyboard */; };
+		EF43FC2D1F14D3E600524E6C /* SuspendedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF43FC2C1F14D3E600524E6C /* SuspendedButton.m */; };
+		EF43FC301F14D65400524E6C /* Center.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF43FC2F1F14D65400524E6C /* Center.bundle */; };
+		EF43FC331F15B90E00524E6C /* DXBSuspendWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EF43FC321F15B90E00524E6C /* DXBSuspendWindow.m */; };
+		EF43FC341F15F6A400524E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF43FC1B1F14D38B00524E6C /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF43FC0F1F14D38A00524E6C /* UserCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF43FC131F14D38A00524E6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF43FC151F14D38A00524E6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF43FC161F14D38A00524E6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF43FC181F14D38A00524E6C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF43FC191F14D38A00524E6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF43FC1C1F14D38B00524E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF43FC1E1F14D38B00524E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF43FC211F14D38B00524E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF43FC231F14D38B00524E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF43FC2B1F14D3E600524E6C /* SuspendedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuspendedButton.h; path = ThirdSDK/First/SuspendedButton.h; sourceTree = "<group>"; };
+		EF43FC2C1F14D3E600524E6C /* SuspendedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuspendedButton.m; path = ThirdSDK/First/SuspendedButton.m; sourceTree = "<group>"; };
+		EF43FC2F1F14D65400524E6C /* Center.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Center.bundle; path = ThirdSDK/First/Center.bundle; sourceTree = "<group>"; };
+		EF43FC311F15B90E00524E6C /* DXBSuspendWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXBSuspendWindow.h; path = ThirdSDK/Second/DXBSuspendWindow.h; sourceTree = "<group>"; };
+		EF43FC321F15B90E00524E6C /* DXBSuspendWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXBSuspendWindow.m; path = ThirdSDK/Second/DXBSuspendWindow.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF43FC0C1F14D38A00524E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF43FC061F14D38A00524E6C = {
+			isa = PBXGroup;
+			children = (
+				EF43FC111F14D38A00524E6C /* UserCenter */,
+				EF43FC101F14D38A00524E6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF43FC101F14D38A00524E6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF43FC0F1F14D38A00524E6C /* UserCenter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF43FC111F14D38A00524E6C /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				EF43FC2F1F14D65400524E6C /* Center.bundle */,
+				EF43FC291F14D3C900524E6C /* ThirdSDK */,
+				EF43FC151F14D38A00524E6C /* AppDelegate.h */,
+				EF43FC161F14D38A00524E6C /* AppDelegate.m */,
+				EF43FC181F14D38A00524E6C /* ViewController.h */,
+				EF43FC191F14D38A00524E6C /* ViewController.m */,
+				EF43FC1B1F14D38B00524E6C /* Main.storyboard */,
+				EF43FC1E1F14D38B00524E6C /* Assets.xcassets */,
+				EF43FC201F14D38B00524E6C /* LaunchScreen.storyboard */,
+				EF43FC231F14D38B00524E6C /* Info.plist */,
+				EF43FC121F14D38A00524E6C /* Supporting Files */,
+			);
+			path = UserCenter;
+			sourceTree = "<group>";
+		};
+		EF43FC121F14D38A00524E6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF43FC131F14D38A00524E6C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF43FC291F14D3C900524E6C /* ThirdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EF43FC2A1F14D3D400524E6C /* First */,
+				EF43FC2E1F14D3ED00524E6C /* Second */,
+			);
+			name = ThirdSDK;
+			sourceTree = "<group>";
+		};
+		EF43FC2A1F14D3D400524E6C /* First */ = {
+			isa = PBXGroup;
+			children = (
+				EF43FC2B1F14D3E600524E6C /* SuspendedButton.h */,
+				EF43FC2C1F14D3E600524E6C /* SuspendedButton.m */,
+			);
+			name = First;
+			sourceTree = "<group>";
+		};
+		EF43FC2E1F14D3ED00524E6C /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				EF43FC311F15B90E00524E6C /* DXBSuspendWindow.h */,
+				EF43FC321F15B90E00524E6C /* DXBSuspendWindow.m */,
+			);
+			name = Second;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF43FC0E1F14D38A00524E6C /* UserCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF43FC261F14D38B00524E6C /* Build configuration list for PBXNativeTarget "UserCenter" */;
+			buildPhases = (
+				EF43FC0B1F14D38A00524E6C /* Sources */,
+				EF43FC0C1F14D38A00524E6C /* Frameworks */,
+				EF43FC0D1F14D38A00524E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UserCenter;
+			productName = UserCenter;
+			productReference = EF43FC0F1F14D38A00524E6C /* UserCenter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF43FC071F14D38A00524E6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = yinhu;
+				TargetAttributes = {
+					EF43FC0E1F14D38A00524E6C = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = HWQE5DACNR;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF43FC0A1F14D38A00524E6C /* Build configuration list for PBXProject "UserCenter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF43FC061F14D38A00524E6C;
+			productRefGroup = EF43FC101F14D38A00524E6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF43FC0E1F14D38A00524E6C /* UserCenter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF43FC0D1F14D38A00524E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF43FC221F14D38B00524E6C /* LaunchScreen.storyboard in Resources */,
+				EF43FC301F14D65400524E6C /* Center.bundle in Resources */,
+				EF43FC1F1F14D38B00524E6C /* Assets.xcassets in Resources */,
+				EF43FC341F15F6A400524E6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF43FC0B1F14D38A00524E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF43FC1A1F14D38A00524E6C /* ViewController.m in Sources */,
+				EF43FC171F14D38A00524E6C /* AppDelegate.m in Sources */,
+				EF43FC141F14D38A00524E6C /* main.m in Sources */,
+				EF43FC331F15B90E00524E6C /* DXBSuspendWindow.m in Sources */,
+				EF43FC2D1F14D3E600524E6C /* SuspendedButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF43FC1B1F14D38B00524E6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF43FC1C1F14D38B00524E6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF43FC201F14D38B00524E6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF43FC211F14D38B00524E6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF43FC241F14D38B00524E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF43FC251F14D38B00524E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF43FC271F14D38B00524E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HWQE5DACNR;
+				INFOPLIST_FILE = UserCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yinhu.usercenter.UserCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF43FC281F14D38B00524E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HWQE5DACNR;
+				INFOPLIST_FILE = UserCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yinhu.usercenter.UserCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF43FC0A1F14D38A00524E6C /* Build configuration list for PBXProject "UserCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF43FC241F14D38B00524E6C /* Debug */,
+				EF43FC251F14D38B00524E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF43FC261F14D38B00524E6C /* Build configuration list for PBXNativeTarget "UserCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF43FC271F14D38B00524E6C /* Debug */,
+				EF43FC281F14D38B00524E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF43FC071F14D38A00524E6C /* Project object */;
+}
