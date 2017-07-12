@@ -1,9 +1,9 @@
 //
 //  SuspendedButton.m
-//  xuanfutiao
+//  UserCenter
 //
-//  Created by Mac on 14/12/24.
-//  Copyright (c) 2014年 Mac. All rights reserved.
+//  Created by 董现彬 on 17/7/12.
+//  Copyright (c) 2017年 董现彬. All rights reserved.
 //
 
 #import "SuspendedButton.h"
