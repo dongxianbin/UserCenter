@@ -1,4 +1,4 @@
-//
+///Users/yinhu/Desktop/UserCenter/UserCenter
 //  SuspendedButton.h
 //  UserCenter
 //
@@ -7,14 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//点击第一个button
-#define TOUCH_BUTTON_ZERO @"TOUCHBUTTONZERO"
-//点击第二个button
-#define TOUCH_BUTTON_ONE @"TOUCHBUTTONONE"
-//点击第三个button
-#define TOUCH_BUTTON_TWO @"TOUCHBUTTONTWO"
-//点击第四个button
-#define TOUCH_BUTTON_THREE @"TOUCHBUTTONTHREE"
+
 
 #define MYBUNDLE_NAME @"Center.bundle"
 
@@ -37,10 +30,10 @@ typedef enum  _NdToolBarPlace
 
 @interface SuspendedButton : UIView
 
-
+@property (nonatomic,copy) void(^clickBolcks)(NSInteger i);
 //显示悬浮标
-+ (SuspendedButton *)suspendedButtonWithCGPoint:(NdToolBarPlace)place inView:(UIView *)baseview;
+- (instancetype)initWithWithCGPoint:(NdToolBarPlace)place inView:(UIView *)baseview;
 //关闭悬浮标
-+(void)deleteSuspendedButton;
+-(void)deleteSuspendedButton;
 -(void)close;
 @end

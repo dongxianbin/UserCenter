@@ -28,7 +28,7 @@
     UIImageView *imageView;
     UIImageView *buttonimageView;
     CGPoint _newPosition;
-   
+    NdToolBarPlace splace;
 }
 @property (nonatomic,retain) UIView *buttonListView;
 @property (nonatomic,retain) UIView *baseView;
@@ -39,23 +39,19 @@
 
 @synthesize buttonListView = _buttonListView;
 @synthesize baseView = _baseView;
-static SuspendedButton *_instance = nil;
+
 #pragma mark - 继承方法 
-- (id)init{
-    if (self = [super init]) {
-       
-    }
-    return self;
-}
-- (id)initWithFrame:(CGRect)frame
+
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self = [super initWithFrame:frame])
-    {
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
         _isShowingButtonList = NO;
-        
     }
     return self;
 }
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -107,75 +103,108 @@ static SuspendedButton *_instance = nil;
     }];
 }
 #pragma mark - 显示悬浮标
-+ (SuspendedButton *)suspendedButtonWithCGPoint:(NdToolBarPlace)place inView:(UIView *)baseview
+- (instancetype)initWithWithCGPoint:(NdToolBarPlace)place inView:(UIView *)baseview
 {
-    if (!_instance) {
-        _instance = [[self alloc]init];
-        
-        CGPoint point;
-        switch (place) {
-            case NdToolBarAtTopLeft:
-                point = CGPointMake(0, 0);
-                break;
-            case NdToolBarAtTopRight:
-                point = CGPointMake((kScreenWidth - 50), 0);
-                break;
-            case NdToolBarAtMiddleLeft:
-                point = CGPointMake(0, (kScreenHeight - 50)/2);
-                break;
-            case NdToolBarAtMiddleRight:
-                point = CGPointMake((kScreenWidth - 50), (kScreenHeight - 50)/2);
-                break;
-            case NdToolBarAtBottomLeft:
-                point = CGPointMake(0, (kScreenHeight - 50));
-                break;
-            case NdToolBarAtBottomRight:
-                point = CGPointMake((kScreenWidth - 50), (kScreenHeight - 50));
-                break;
-            default:
-                break;
-        }
-        
+    CGPoint point;
+    splace = place;
+    switch (place) {
+        case NdToolBarAtTopLeft:
+            point = CGPointMake(0, 0);
+            break;
+        case NdToolBarAtTopRight:
+            point = CGPointMake((kScreenWidth - 50), 0);
+            break;
+        case NdToolBarAtMiddleLeft:
+            point = CGPointMake(0, (kScreenHeight - 50)/2);
+            break;
+        case NdToolBarAtMiddleRight:
+            point = CGPointMake((kScreenWidth - 50), (kScreenHeight - 50)/2);
+            break;
+        case NdToolBarAtBottomLeft:
+            point = CGPointMake(0, (kScreenHeight - 50));
+            break;
+        case NdToolBarAtBottomRight:
+            point = CGPointMake((kScreenWidth - 50), (kScreenHeight - 50));
+            break;
+        default:
+            break;
+    }
+    _windowSize.size = CGSizeMake(kScreenWidth, kScreenHeight);
+    //封装了获取屏幕Size的方法
+    _newPosition = [self correctPosition:point];
+    
+    self = [super initWithFrame:CGRectMake(_newPosition.x, _newPosition.y, 50, 50)];
+    
+    if (self) {
+       
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            _instance = [[SuspendedButton alloc] initWithCGPoint:point];
-            _instance.baseView = baseview;
-            [_instance constructUI];
-            [baseview addSubview:_instance];
+            self.baseView = baseview;
+            [self constructUI];
+            [baseview addSubview:self];
+            //设备旋转的时候收回按钮
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientChange:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
         });
     }
     
-    return _instance;
+    return self;
+}
+#pragma mark  ------- 设备旋转 -----------
+- (void)orientChange:(NSNotification *)notification{
+    //不设置的话,长按动画那块有问题
+    self.layer.masksToBounds = YES;
+    CGPoint point;
+    switch (splace) {
+        case NdToolBarAtTopLeft:
+            point = CGPointMake(0, 0);
+            break;
+        case NdToolBarAtTopRight:
+            point = CGPointMake((kScreenWidth - 50), 0);
+            break;
+        case NdToolBarAtMiddleLeft:
+            point = CGPointMake(0, (kScreenHeight - 50)/2);
+            break;
+        case NdToolBarAtMiddleRight:
+            point = CGPointMake((kScreenWidth - 50), (kScreenHeight - 50)/2);
+            break;
+        case NdToolBarAtBottomLeft:
+            point = CGPointMake(0, (kScreenHeight - 50));
+            break;
+        case NdToolBarAtBottomRight:
+            point = CGPointMake((kScreenWidth - 50), (kScreenHeight - 50));
+            break;
+        default:
+            break;
+    }
+    _windowSize.size = CGSizeMake(kScreenWidth, kScreenHeight);
+    //封装了获取屏幕Size的方法
+    _newPosition = [self correctPosition:point];
+    
+    //旋转前要先改变frame，否则坐标有问题（临时办法）
+    self.frame = CGRectMake(_newPosition.x, _newPosition.y, 50, 50);
+    
+    
 }
 #pragma mark - 关闭悬浮标
-+(void)deleteSuspendedButton
+-(void)deleteSuspendedButton
 {
-    [_instance close];
+    [self close];
     
-    [_instance removeFromSuperview];
+    [self removeFromSuperview];
 }
 -(void)close
 {
     [_buttonListView removeFromSuperview];
 }
 #pragma mark - 辅助方法
-- (id)initWithCGPoint:(CGPoint)pos
-{
-    _windowSize.size = CGSizeMake(kScreenWidth, kScreenHeight);
-    //封装了获取屏幕Size的方法
-    _newPosition = [self correctPosition:pos];
-    return [self initWithFrame:CGRectMake(_newPosition.x, _newPosition.y, 50, 50)];
-    
-}
-
-
 
 - (CGPoint)correctPosition:(CGPoint)pos
 {
     CGPoint newPosition;
     if ((pos.x + 50 > _windowSize.size.width) || (pos.x > _windowSize.size.width/2-25))
     {
-        newPosition.x = _windowSize.size.width - 50; _isOnLeft = NO;
+        newPosition.x = _windowSize.size.width - 50;
+        _isOnLeft = NO;
     }
     else
     {
@@ -223,7 +252,7 @@ static SuspendedButton *_instance = nil;
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.backgroundColor = [UIColor clearColor];
         [button addTarget:self action:@selector(optionsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        button.tag = i + 2000;
+        button.tag = i;
         button.frame = CGRectMake(20 + i*size.width, 0, size.width, size.height);
         [button setTitle:array[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal]; 
@@ -335,22 +364,14 @@ static SuspendedButton *_instance = nil;
 #pragma mark - 按钮回调
 - (void)optionsButtonPressed:(UIButton *)button
 {
-    NSLog(@"buttonNumberPressed:%ld",(long)button.tag);
-    switch (button.tag)
-    {
-        case 2000:
-            [[NSNotificationCenter defaultCenter]postNotificationName:TOUCH_BUTTON_ZERO object:nil];
-            break;
-        case 2001:
-            [[NSNotificationCenter defaultCenter]postNotificationName:TOUCH_BUTTON_ONE object:nil];
-            break;
-        default:
-            break;
+    if (self.clickBolcks) {
+        self.clickBolcks(button.tag);
     }
+
 }
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 }
 
 
