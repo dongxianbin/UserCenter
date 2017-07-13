@@ -153,6 +153,9 @@
 - (void)orientChange:(NSNotification *)notification{
     //不设置的话,长按动画那块有问题
     self.layer.masksToBounds = YES;
+    if (_isShowingButtonList) {
+        [self tiggerButtonList];
+    }
     CGPoint point;
     switch (splace) {
         case NdToolBarAtTopLeft:
