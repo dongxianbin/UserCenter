@@ -10,6 +10,7 @@
 #import "SuspendedButton.h"
 #import "DXBSuspendWindow.h"
 
+
 @interface ViewController ()
 {
     DXBSuspendWindow *DXBsuspendWindow;
@@ -19,12 +20,12 @@
 
 @implementation ViewController
 -(void)viewDidAppear:(BOOL)animated{
-     //显示悬浮图标
+    //显示悬浮图标
 //    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
 //    CGFloat floatWidowHeight = 50, floatWindowWidth = 50;
 //    DXBsuspendWindow = [[DXBSuspendWindow alloc]initWithFrame:CGRectMake(0, (screenHeight - floatWidowHeight)/2, floatWindowWidth, floatWidowHeight) mainImageName:Resouse(@"YH_center_logo@2x.png") imagesAndTitle:@{Resouse(@"YH_center_user@2x.png"):@"用户中心"} bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
-//    
-//    
+//
+//
 //    DXBsuspendWindow.clickBolcks = ^(NSInteger i){
 //        NSLog(@"-------点击了%ld--------",(long)i);
 //    };
@@ -38,8 +39,19 @@
 //    //显示悬浮图标
    
     sususpendWindow = [[SuspendedButton alloc]initWithWithCGPoint:NdToolBarAtMiddleLeft inView:self.view];
+    
     sususpendWindow.clickBolcks = ^(NSInteger i){
         NSLog(@"-------点击了%ld--------",(long)i);
+        switch (i) {
+            case 0:
+            {
+                
+            }
+                break;
+                
+            default:
+                break;
+        }
     };
 
 }
